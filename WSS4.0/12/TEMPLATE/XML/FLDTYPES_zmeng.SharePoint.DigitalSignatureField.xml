@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FieldTypes>
+  <FieldType>
+    <Field Name="TypeName">zmeng.SharePoint.DigitalSignature</Field>
+    <Field Name="ParentType">Text</Field>
+    <Field Name="TypeDisplayName">Digital Signature</Field>
+    <Field Name="TypeShortDescription">Digital Signature</Field>
+    <Field Name="UserCreatable">TRUE</Field>
+    <Field Name="Filterable">TRUE</Field>
+    <Field Name="Sortable">TRUE</Field>
+    <Field Name="ShowOnDocumentLibraryAuthoringPages">FALSE</Field>
+    <Field Name="FieldTypeClass">zmeng.SharePoint.DigitalSignatureField, zmeng.SharePoint.DigitalSignature, Version=1.1.0.0, Culture=neutral, PublicKeyToken=d19b49a3056a8fa1</Field>
+    <RenderPattern Name="DisplayPattern">
+      <IfEqual>
+        <Expr1>
+            <Column />
+        </Expr1>
+        <Expr2 />
+        <Then />
+        <Else>
+          <HTML><![CDATA[<script language="javascript" src="../../_layouts/zmeng/DigitalSignature/DigitalSignatureDisplay.aspx?ListId=]]></HTML>
+          <HTML>
+            <List />
+          </HTML>
+          <HTML><![CDATA[&ItemId=]]></HTML>
+          <HTML>
+            <ID />
+          </HTML>
+          <HTML><![CDATA[&FieldDisplayName=]]></HTML>
+          <HTML>
+            <Property Select="DisplayName"/>
+          </HTML>
+          <HTML><![CDATA["></script>]]></HTML>
+        </Else>
+     </IfEqual>
+    </RenderPattern>
+  </FieldType>
+</FieldTypes>
